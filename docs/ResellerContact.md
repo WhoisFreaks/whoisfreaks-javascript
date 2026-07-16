@@ -1,0 +1,11 @@
+# WhoisFreaks.ResellerContact
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** |  | [optional] 
+**emailAddress** | **String** |  | [optional] 
+**phone** | **String** |  | [optional] 
+
+
