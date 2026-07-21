@@ -17,7 +17,7 @@ import TyposquattingDomain from './TyposquattingDomain';
 /**
  * The TyposquattingResponse model module.
  * @module model/TyposquattingResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class TyposquattingResponse {
     /**

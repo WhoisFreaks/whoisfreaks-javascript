@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DateRangeStatus model module.
  * @module model/DateRangeStatus
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DateRangeStatus {
     /**

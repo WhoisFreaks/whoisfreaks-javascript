@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TyposquattingDomain model module.
  * @module model/TyposquattingDomain
- * @version 0.20.0
+ * @version 0.21.0
  */
 class TyposquattingDomain {
     /**

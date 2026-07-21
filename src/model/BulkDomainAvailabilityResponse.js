@@ -17,7 +17,7 @@ import DomainAvailabilityItem from './DomainAvailabilityItem';
 /**
  * The BulkDomainAvailabilityResponse model module.
  * @module model/BulkDomainAvailabilityResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class BulkDomainAvailabilityResponse {
     /**

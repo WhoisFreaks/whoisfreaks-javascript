@@ -19,7 +19,7 @@ import TyposquattingResponse from '../model/TyposquattingResponse';
 /**
 * Typosquatting service.
 * @module api/TyposquattingApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class TyposquattingApi {
 

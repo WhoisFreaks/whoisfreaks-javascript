@@ -17,7 +17,7 @@ import DnsResponse from './DnsResponse';
 /**
  * The HistoricalDnsResponse model module.
  * @module model/HistoricalDnsResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class HistoricalDnsResponse {
     /**

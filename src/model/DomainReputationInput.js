@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DomainReputationInput model module.
  * @module model/DomainReputationInput
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DomainReputationInput {
     /**

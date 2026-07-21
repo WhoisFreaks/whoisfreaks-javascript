@@ -20,7 +20,7 @@ import IpLocation from './IpLocation';
 /**
  * The GeolocationResponse model module.
  * @module model/GeolocationResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class GeolocationResponse {
     /**

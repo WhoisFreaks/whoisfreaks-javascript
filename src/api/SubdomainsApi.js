@@ -19,7 +19,7 @@ import SubdomainsResponse from '../model/SubdomainsResponse';
 /**
 * Subdomains service.
 * @module api/SubdomainsApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class SubdomainsApi {
 

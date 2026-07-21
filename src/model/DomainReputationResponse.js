@@ -22,7 +22,7 @@ import TrustSignals from './TrustSignals';
 /**
  * The DomainReputationResponse model module.
  * @module model/DomainReputationResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DomainReputationResponse {
     /**

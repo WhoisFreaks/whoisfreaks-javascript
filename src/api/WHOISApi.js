@@ -23,7 +23,7 @@ import WhoisResponse from '../model/WhoisResponse';
 /**
 * WHOIS service.
 * @module api/WHOISApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class WHOISApi {
 

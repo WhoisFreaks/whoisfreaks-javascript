@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReputationIndicators model module.
  * @module model/ReputationIndicators
- * @version 0.20.0
+ * @version 0.21.0
  */
 class ReputationIndicators {
     /**

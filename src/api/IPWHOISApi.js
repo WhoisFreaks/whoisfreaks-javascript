@@ -19,7 +19,7 @@ import IpWhoisResponse from '../model/IpWhoisResponse';
 /**
 * IPWHOIS service.
 * @module api/IPWHOISApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class IPWHOISApi {
 

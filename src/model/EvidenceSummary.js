@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EvidenceSummary model module.
  * @module model/EvidenceSummary
- * @version 0.20.0
+ * @version 0.21.0
  */
 class EvidenceSummary {
     /**

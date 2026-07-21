@@ -17,7 +17,7 @@ import RelatedIoc from './RelatedIoc';
 /**
  * The ReputationIntelligence model module.
  * @module model/ReputationIntelligence
- * @version 0.20.0
+ * @version 0.21.0
  */
 class ReputationIntelligence {
     /**

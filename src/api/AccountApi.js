@@ -20,7 +20,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * Account service.
 * @module api/AccountApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class AccountApi {
 
@@ -110,7 +110,7 @@ export default class AccountApi {
       }
 
       return this.apiClient.callApi(
-        '/v3.3/status', 'GET',
+        '/v3.4/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, basePath
       );

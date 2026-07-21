@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReputationSignal model module.
  * @module model/ReputationSignal
- * @version 0.20.0
+ * @version 0.21.0
  */
 class ReputationSignal {
     /**

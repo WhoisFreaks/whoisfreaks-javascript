@@ -31,6 +31,7 @@ docs/DatabasesIPSecurityApi.md
 docs/DatabasesIPWHOISApi.md
 docs/DatabasesNewlyRegisteredApi.md
 docs/DatabasesSubdomainsApi.md
+docs/DatabasesThreatFeedApi.md
 docs/DatabasesWHOISApi.md
 docs/DateRangeStatus.md
 docs/DgaFeatures.md
@@ -91,6 +92,7 @@ docs/SslUnitInfo.md
 docs/Subdomain.md
 docs/SubdomainsApi.md
 docs/SubdomainsResponse.md
+docs/ThreatFeedStatus.md
 docs/ThreatSource.md
 docs/TrustSignals.md
 docs/TyposquattingApi.md
@@ -119,6 +121,7 @@ src/api/DatabasesIPSecurityApi.js
 src/api/DatabasesIPWHOISApi.js
 src/api/DatabasesNewlyRegisteredApi.js
 src/api/DatabasesSubdomainsApi.js
+src/api/DatabasesThreatFeedApi.js
 src/api/DatabasesWHOISApi.js
 src/api/DomainAvailabilityApi.js
 src/api/DomainReputationApi.js
@@ -199,6 +202,7 @@ src/model/SslResponse.js
 src/model/SslUnitInfo.js
 src/model/Subdomain.js
 src/model/SubdomainsResponse.js
+src/model/ThreatFeedStatus.js
 src/model/ThreatSource.js
 src/model/TrustSignals.js
 src/model/TyposquattingDomain.js
@@ -221,6 +225,7 @@ test/api/DatabasesIPSecurityApi.spec.js
 test/api/DatabasesIPWHOISApi.spec.js
 test/api/DatabasesNewlyRegisteredApi.spec.js
 test/api/DatabasesSubdomainsApi.spec.js
+test/api/DatabasesThreatFeedApi.spec.js
 test/api/DatabasesWHOISApi.spec.js
 test/api/DomainAvailabilityApi.spec.js
 test/api/DomainReputationApi.spec.js
@@ -300,6 +305,7 @@ test/model/SslResponse.spec.js
 test/model/SslUnitInfo.spec.js
 test/model/Subdomain.spec.js
 test/model/SubdomainsResponse.spec.js
+test/model/ThreatFeedStatus.spec.js
 test/model/ThreatSource.spec.js
 test/model/TrustSignals.spec.js
 test/model/TyposquattingDomain.spec.js

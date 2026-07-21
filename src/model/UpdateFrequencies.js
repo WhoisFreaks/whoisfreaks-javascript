@@ -17,7 +17,7 @@ import DateRangeStatus from './DateRangeStatus';
 /**
  * The UpdateFrequencies model module.
  * @module model/UpdateFrequencies
- * @version 0.20.0
+ * @version 0.21.0
  */
 class UpdateFrequencies {
     /**

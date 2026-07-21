@@ -17,7 +17,7 @@ import AsnInfo from './AsnInfo';
 /**
  * The AsnWhoisResponse model module.
  * @module model/AsnWhoisResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class AsnWhoisResponse {
     /**

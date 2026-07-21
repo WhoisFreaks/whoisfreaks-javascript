@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SslAlternateNames model module.
  * @module model/SslAlternateNames
- * @version 0.20.0
+ * @version 0.21.0
  */
 class SslAlternateNames {
     /**

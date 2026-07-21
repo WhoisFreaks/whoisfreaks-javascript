@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property threatFeed (base name: "threat_feed")', function() {
+      // uncomment below and update the code to test the property threatFeed
+      //var instance = new WhoisFreaks.DatabaseFileStatus();
+      //expect(instance).to.be();
+    });
+
     it('should have the property databaseUpdates (base name: "database_updates")', function() {
       // uncomment below and update the code to test the property databaseUpdates
       //var instance = new WhoisFreaks.DatabaseFileStatus();

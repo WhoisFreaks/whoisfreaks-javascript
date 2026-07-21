@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AsnPeer model module.
  * @module model/AsnPeer
- * @version 0.20.0
+ * @version 0.21.0
  */
 class AsnPeer {
     /**

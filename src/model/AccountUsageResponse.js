@@ -18,7 +18,7 @@ import ApiSubscription from './ApiSubscription';
 /**
  * The AccountUsageResponse model module.
  * @module model/AccountUsageResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class AccountUsageResponse {
     /**

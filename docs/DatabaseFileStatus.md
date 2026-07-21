@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **cleanedExpired** | [**DateRangeStatus**](DateRangeStatus.md) |  | [optional] 
 **dropped** | [**DateRangeStatus**](DateRangeStatus.md) |  | [optional] 
 **droppedWithBacklinks** | [**DateRangeStatus**](DateRangeStatus.md) |  | [optional] 
+**threatFeed** | [**ThreatFeedStatus**](ThreatFeedStatus.md) |  | [optional] 
 **databaseUpdates** | [**DatabaseUpdates**](DatabaseUpdates.md) |  | [optional] 
 
 

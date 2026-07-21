@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DgaFeatures model module.
  * @module model/DgaFeatures
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DgaFeatures {
     /**

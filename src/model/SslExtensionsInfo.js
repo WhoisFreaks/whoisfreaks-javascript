@@ -19,7 +19,7 @@ import SslCertificatePolicy from './SslCertificatePolicy';
 /**
  * The SslExtensionsInfo model module.
  * @module model/SslExtensionsInfo
- * @version 0.20.0
+ * @version 0.21.0
  */
 class SslExtensionsInfo {
     /**

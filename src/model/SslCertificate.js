@@ -19,7 +19,7 @@ import SslUnitInfo from './SslUnitInfo';
 /**
  * The SslCertificate model module.
  * @module model/SslCertificate
- * @version 0.20.0
+ * @version 0.21.0
  */
 class SslCertificate {
     /**

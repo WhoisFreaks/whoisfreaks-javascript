@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WhoisPerson model module.
  * @module model/WhoisPerson
- * @version 0.20.0
+ * @version 0.21.0
  */
 class WhoisPerson {
     /**

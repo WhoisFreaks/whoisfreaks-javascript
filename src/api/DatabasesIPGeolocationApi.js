@@ -19,7 +19,7 @@ import SnapshotStatus from '../model/SnapshotStatus';
 /**
 * DatabasesIPGeolocation service.
 * @module api/DatabasesIPGeolocationApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class DatabasesIPGeolocationApi {
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PersonalInformation model module.
  * @module model/PersonalInformation
- * @version 0.20.0
+ * @version 0.21.0
  */
 class PersonalInformation {
     /**

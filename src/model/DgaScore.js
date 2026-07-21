@@ -17,7 +17,7 @@ import DgaFeatures from './DgaFeatures';
 /**
  * The DgaScore model module.
  * @module model/DgaScore
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DgaScore {
     /**

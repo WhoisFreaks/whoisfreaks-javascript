@@ -17,7 +17,7 @@ import RegistrarInformation from './RegistrarInformation';
 /**
  * The RegistryData model module.
  * @module model/RegistryData
- * @version 0.20.0
+ * @version 0.21.0
  */
 class RegistryData {
     /**

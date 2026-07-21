@@ -18,7 +18,7 @@ import ThreatSource from './ThreatSource';
 /**
  * The RiskCategory model module.
  * @module model/RiskCategory
- * @version 0.20.0
+ * @version 0.21.0
  */
 class RiskCategory {
     /**

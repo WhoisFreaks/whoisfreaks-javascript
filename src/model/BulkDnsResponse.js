@@ -17,7 +17,7 @@ import DnsResponse from './DnsResponse';
 /**
  * The BulkDnsResponse model module.
  * @module model/BulkDnsResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class BulkDnsResponse {
     /**

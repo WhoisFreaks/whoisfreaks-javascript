@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CountryMetadata model module.
  * @module model/CountryMetadata
- * @version 0.20.0
+ * @version 0.21.0
  */
 class CountryMetadata {
     /**

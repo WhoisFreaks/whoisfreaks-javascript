@@ -17,7 +17,7 @@ import ReputationSignal from './ReputationSignal';
 /**
  * The ReputationSignals model module.
  * @module model/ReputationSignals
- * @version 0.20.0
+ * @version 0.21.0
  */
 class ReputationSignals {
     /**

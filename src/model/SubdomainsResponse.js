@@ -17,7 +17,7 @@ import Subdomain from './Subdomain';
 /**
  * The SubdomainsResponse model module.
  * @module model/SubdomainsResponse
- * @version 0.20.0
+ * @version 0.21.0
  */
 class SubdomainsResponse {
     /**

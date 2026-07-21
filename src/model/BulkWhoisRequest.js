@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkWhoisRequest model module.
  * @module model/BulkWhoisRequest
- * @version 0.20.0
+ * @version 0.21.0
  */
 class BulkWhoisRequest {
     /**

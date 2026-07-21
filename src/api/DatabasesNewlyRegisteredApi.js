@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesNewlyRegistered service.
 * @module api/DatabasesNewlyRegisteredApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class DatabasesNewlyRegisteredApi {
 

@@ -82,6 +82,7 @@ import SslResponse from './model/SslResponse';
 import SslUnitInfo from './model/SslUnitInfo';
 import Subdomain from './model/Subdomain';
 import SubdomainsResponse from './model/SubdomainsResponse';
+import ThreatFeedStatus from './model/ThreatFeedStatus';
 import ThreatSource from './model/ThreatSource';
 import TrustSignals from './model/TrustSignals';
 import TyposquattingDomain from './model/TyposquattingDomain';
@@ -104,6 +105,7 @@ import DatabasesIPSecurityApi from './api/DatabasesIPSecurityApi';
 import DatabasesIPWHOISApi from './api/DatabasesIPWHOISApi';
 import DatabasesNewlyRegisteredApi from './api/DatabasesNewlyRegisteredApi';
 import DatabasesSubdomainsApi from './api/DatabasesSubdomainsApi';
+import DatabasesThreatFeedApi from './api/DatabasesThreatFeedApi';
 import DatabasesWHOISApi from './api/DatabasesWHOISApi';
 import DomainAvailabilityApi from './api/DomainAvailabilityApi';
 import DomainReputationApi from './api/DomainReputationApi';
@@ -145,7 +147,7 @@ import WHOISApi from './api/WHOISApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.20.0
+* @version 0.21.0
 */
 export {
     /**
@@ -569,6 +571,12 @@ export {
     SubdomainsResponse,
 
     /**
+     * The ThreatFeedStatus model constructor.
+     * @property {module:model/ThreatFeedStatus}
+     */
+    ThreatFeedStatus,
+
+    /**
      * The ThreatSource model constructor.
      * @property {module:model/ThreatSource}
      */
@@ -699,6 +707,12 @@ export {
     * @property {module:api/DatabasesSubdomainsApi}
     */
     DatabasesSubdomainsApi,
+
+    /**
+    * The DatabasesThreatFeedApi service constructor.
+    * @property {module:api/DatabasesThreatFeedApi}
+    */
+    DatabasesThreatFeedApi,
 
     /**
     * The DatabasesWHOISApi service constructor.

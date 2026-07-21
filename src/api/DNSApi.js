@@ -23,7 +23,7 @@ import ReverseDnsResponse from '../model/ReverseDnsResponse';
 /**
 * DNS service.
 * @module api/DNSApi
-* @version 0.20.0
+* @version 0.21.0
 */
 export default class DNSApi {
 

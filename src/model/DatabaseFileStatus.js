@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import DatabaseUpdates from './DatabaseUpdates';
 import DateRangeStatus from './DateRangeStatus';
 import NewlyStatus from './NewlyStatus';
+import ThreatFeedStatus from './ThreatFeedStatus';
 
 /**
  * The DatabaseFileStatus model module.
  * @module model/DatabaseFileStatus
- * @version 0.20.0
+ * @version 0.21.0
  */
 class DatabaseFileStatus {
     /**
@@ -69,6 +70,9 @@ class DatabaseFileStatus {
             if (data.hasOwnProperty('dropped_with_backlinks')) {
                 obj['dropped_with_backlinks'] = DateRangeStatus.constructFromObject(data['dropped_with_backlinks']);
             }
+            if (data.hasOwnProperty('threat_feed')) {
+                obj['threat_feed'] = ThreatFeedStatus.constructFromObject(data['threat_feed']);
+            }
             if (data.hasOwnProperty('database_updates')) {
                 obj['database_updates'] = DatabaseUpdates.constructFromObject(data['database_updates']);
             }
@@ -115,6 +119,11 @@ DatabaseFileStatus.prototype['dropped'] = undefined;
  * @member {module:model/DateRangeStatus} dropped_with_backlinks
  */
 DatabaseFileStatus.prototype['dropped_with_backlinks'] = undefined;
+
+/**
+ * @member {module:model/ThreatFeedStatus} threat_feed
+ */
+DatabaseFileStatus.prototype['threat_feed'] = undefined;
 
 /**
  * @member {module:model/DatabaseUpdates} database_updates
