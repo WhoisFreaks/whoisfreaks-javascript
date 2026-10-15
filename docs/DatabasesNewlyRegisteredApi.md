@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## dbNewlyCctld
 
-> File dbNewlyCctld(whois, opts)
+> Blob dbNewlyCctld(whois, opts)
 
 Newly Registered ccTLD (CSV)
 
@@ -25,7 +25,7 @@ Newly Registered ccTLD (CSV). Returns the file/snapshot described by this operat
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -36,8 +36,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let whois = true; // Boolean | 
 let opts = {
-  'date': new Date("2013-10-20"), // Date | yyyy-MM-dd; omit for latest
-  'tlds': "tlds_example" // String | 
+  'date': new Date("2026-10-01"), // Date | yyyy-MM-dd; omit for latest
+  'tlds': "com,net" // String | 
 };
 apiInstance.dbNewlyCctld(whois, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ## dbNewlyCctldCleaned
 
-> File dbNewlyCctldCleaned(opts)
+> Blob dbNewlyCctldCleaned(opts)
 
 Newly Registered ccTLD Cleaned WHOIS (CSV)
 
@@ -81,7 +81,7 @@ Newly Registered ccTLD Cleaned WHOIS (CSV). Returns the file/snapshot described 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -91,7 +91,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbNewlyCctldCleaned(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Newly Registered ccTLD (JSON). Returns the file/snapshot described by this opera
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -143,8 +143,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let opts = {
-  'date': new Date("2013-10-20"), // Date | yyyy-MM-dd; omit for latest
-  'tlds': "tlds_example" // String | 
+  'date': new Date("2026-10-01"), // Date | yyyy-MM-dd; omit for latest
+  'tlds': "com,net" // String | 
 };
 apiInstance.dbNewlyCctldJson(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ## dbNewlyDns
 
-> File dbNewlyDns(opts)
+> Blob dbNewlyDns(opts)
 
 Newly Registered With DNS
 
@@ -187,7 +187,7 @@ Newly Registered With DNS. Returns the file/snapshot described by this operation
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -197,7 +197,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbNewlyDns(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## dbNewlyGtld
 
-> File dbNewlyGtld(whois, opts)
+> Blob dbNewlyGtld(whois, opts)
 
 Newly Registered gTLD (CSV)
 
@@ -239,7 +239,7 @@ Newly Registered gTLD (CSV). Returns the file/snapshot described by this operati
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -250,8 +250,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let whois = true; // Boolean | 
 let opts = {
-  'date': new Date("2013-10-20"), // Date | yyyy-MM-dd; omit for latest
-  'tlds': "tlds_example" // String | 
+  'date': new Date("2026-10-01"), // Date | yyyy-MM-dd; omit for latest
+  'tlds': "com,net" // String | 
 };
 apiInstance.dbNewlyGtld(whois, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ## dbNewlyGtldCleaned
 
-> File dbNewlyGtldCleaned(opts)
+> Blob dbNewlyGtldCleaned(opts)
 
 Newly Registered gTLD Cleaned WHOIS (CSV)
 
@@ -295,7 +295,7 @@ Newly Registered gTLD Cleaned WHOIS (CSV). Returns the file/snapshot described b
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -305,7 +305,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbNewlyGtldCleaned(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -347,7 +347,7 @@ Newly Registered gTLD (JSON). Returns the file/snapshot described by this operat
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -357,8 +357,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesNewlyRegisteredApi();
 let opts = {
-  'date': new Date("2013-10-20"), // Date | yyyy-MM-dd; omit for latest
-  'tlds': "tlds_example" // String | 
+  'date': new Date("2026-10-01"), // Date | yyyy-MM-dd; omit for latest
+  'tlds': "com,net" // String | 
 };
 apiInstance.dbNewlyGtldJson(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);

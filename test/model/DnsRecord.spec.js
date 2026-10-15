@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dnsType (base name: "dnsType")', function() {
+      // uncomment below and update the code to test the property dnsType
+      //var instance = new WhoisFreaks.DnsRecord();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new WhoisFreaks.DnsRecord();
@@ -68,6 +74,24 @@
 
     it('should have the property ttl (base name: "ttl")', function() {
       // uncomment below and update the code to test the property ttl
+      //var instance = new WhoisFreaks.DnsRecord();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rawText (base name: "rawText")', function() {
+      // uncomment below and update the code to test the property rawText
+      //var instance = new WhoisFreaks.DnsRecord();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rRsetType (base name: "rRsetType")', function() {
+      // uncomment below and update the code to test the property rRsetType
+      //var instance = new WhoisFreaks.DnsRecord();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property singleName (base name: "singleName")', function() {
+      // uncomment below and update the code to test the property singleName
       //var instance = new WhoisFreaks.DnsRecord();
       //expect(instance).to.be();
     });

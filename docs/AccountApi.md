@@ -21,7 +21,7 @@ Account Usage. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -67,7 +67,7 @@ No API key required. Returns freshness of all downloadable files.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 
 let apiInstance = new WhoisFreaks.AccountApi();
 apiInstance.databaseFileStatus().then((data) => {
@@ -107,7 +107,7 @@ Rotate API Key. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];

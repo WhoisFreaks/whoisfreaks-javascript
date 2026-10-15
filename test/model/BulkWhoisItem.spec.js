@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -68,6 +68,126 @@
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property queryTime (base name: "query_time")', function() {
+      // uncomment below and update the code to test the property queryTime
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property whoisServer (base name: "whois_server")', function() {
+      // uncomment below and update the code to test the property whoisServer
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property domainRegistered (base name: "domain_registered")', function() {
+      // uncomment below and update the code to test the property domainRegistered
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property secureDns (base name: "secure_dns")', function() {
+      // uncomment below and update the code to test the property secureDns
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property domainHandle (base name: "domain_handle")', function() {
+      // uncomment below and update the code to test the property domainHandle
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createDate (base name: "create_date")', function() {
+      // uncomment below and update the code to test the property createDate
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updateDate (base name: "update_date")', function() {
+      // uncomment below and update the code to test the property updateDate
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property expiryDate (base name: "expiry_date")', function() {
+      // uncomment below and update the code to test the property expiryDate
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property domainRegistrar (base name: "domain_registrar")', function() {
+      // uncomment below and update the code to test the property domainRegistrar
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property resellerContact (base name: "reseller_contact")', function() {
+      // uncomment below and update the code to test the property resellerContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrantContact (base name: "registrant_contact")', function() {
+      // uncomment below and update the code to test the property registrantContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property administrativeContact (base name: "administrative_contact")', function() {
+      // uncomment below and update the code to test the property administrativeContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property technicalContact (base name: "technical_contact")', function() {
+      // uncomment below and update the code to test the property technicalContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property billingContact (base name: "billing_contact")', function() {
+      // uncomment below and update the code to test the property billingContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property eligibilityInfo (base name: "eligibility_info")', function() {
+      // uncomment below and update the code to test the property eligibilityInfo
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property abuseContact (base name: "abuse_contact")', function() {
+      // uncomment below and update the code to test the property abuseContact
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nameServers (base name: "name_servers")', function() {
+      // uncomment below and update the code to test the property nameServers
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property domainStatus (base name: "domain_status")', function() {
+      // uncomment below and update the code to test the property domainStatus
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property whoisRawDomain (base name: "whois_raw_domain")', function() {
+      // uncomment below and update the code to test the property whoisRawDomain
+      //var instance = new WhoisFreaks.BulkWhoisItem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registryData (base name: "registry_data")', function() {
+      // uncomment below and update the code to test the property registryData
       //var instance = new WhoisFreaks.BulkWhoisItem();
       //expect(instance).to.be();
     });

@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -23,7 +23,7 @@ import WhoisResponse from '../model/WhoisResponse';
 /**
 * WHOIS service.
 * @module api/WHOISApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class WHOISApi {
 
@@ -95,9 +95,9 @@ export default class WHOISApi {
 
     /**
      * Historical WHOIS records for a domain
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
      * @param {String} domainName Domain to fetch historical WHOIS records for
      * @param {Object} opts Optional parameters
-     * @param {Number} [page] Page number
      * @param {module:model/String} [format] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WhoisHistoricalResponse} and HTTP response
      */
@@ -113,7 +113,6 @@ export default class WHOISApi {
       };
       let queryParams = {
         'domainName': domainName,
-        'page': opts['page'],
         'format': opts['format']
       };
       let headerParams = {
@@ -134,9 +133,9 @@ export default class WHOISApi {
 
     /**
      * Historical WHOIS records for a domain
+     * Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
      * @param {String} domainName Domain to fetch historical WHOIS records for
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.page Page number
      * @param {module:model/String} opts.format 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WhoisHistoricalResponse}
      */

@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -16,7 +16,7 @@ import superagent from "superagent";
 
 /**
 * @module ApiClient
-* @version 0.21.0
+* @version 0.23.2
 */
 
 /**
@@ -54,12 +54,15 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/0.21.0/Javascript'
+            'User-Agent': 'OpenAPI-Generator/0.23.2/Javascript'
         };
 
         /**
-         * The default HTTP timeout for all API calls.
-         * @type {Number}
+         * The default HTTP timeout for all API calls, in milliseconds: how long to wait for the
+         * server to start responding. It does not limit the total transfer time, so long database
+         * downloads are not cut off. Set an object such as <code>{response: 60000, deadline: 600000}</code>
+         * to pass superagent timeout options directly.
+         * @type {Number|Object}
          * @default 60000
          */
         this.timeout = 60000;
@@ -356,6 +359,12 @@ class ApiClient {
             return null;
         }
 
+        // WhoisFreaks: binary downloads return the raw body as received, whatever the Content-Type:
+        // a Buffer in Node.js, a Blob in browsers (the fallback below would replace a Blob with null).
+        if (returnType === 'Blob') {
+            return response.body;
+        }
+
         // Rely on SuperAgent for parsing response body.
         // See http://visionmedia.github.io/superagent/#parsing-response-bodies
         var data = response.body;
@@ -419,7 +428,9 @@ class ApiClient {
         }
 
         // set request timeout
-        request.timeout(this.timeout);
+        // WhoisFreaks: a number is a response timeout (time to first byte), not a total deadline,
+        // so a download that takes longer than this.timeout overall still completes.
+        request.timeout(typeof this.timeout === 'number' ? {response: this.timeout} : this.timeout);
 
         var contentType = this.jsonPreferredMime(contentTypes);
         if (contentType) {
@@ -465,6 +476,9 @@ class ApiClient {
 
         if (returnType === 'Blob') {
           request.responseType('blob');
+          // WhoisFreaks: database files can exceed superagent's 200 MB default cap on buffered
+          // response bodies in Node.js (browsers ignore this setting).
+          request.maxResponseSize(Number.MAX_SAFE_INTEGER);
         } else if (returnType === 'String') {
           request.responseType('text');
         }
@@ -487,6 +501,14 @@ class ApiClient {
                         err.status = response.status;
                         err.statusText = response.statusText;
                         err.body = response.body;
+                        // WhoisFreaks: a binary download buffers every body, error bodies included;
+                        // decode a JSON error body so err.body matches the other operations.
+                        if (returnType === 'Blob' && typeof Buffer === 'function' && Buffer.isBuffer(err.body)
+                            && this.isJsonMime(response.type)) {
+                            try {
+                                err.body = JSON.parse(err.body.toString('utf8'));
+                            } catch (e) {}
+                        }
                         err.response = response;
                     }
                     err.error = error;

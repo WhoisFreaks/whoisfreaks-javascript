@@ -22,7 +22,7 @@ Up to 100 domains in one request. 1 credit per successful domain.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -71,10 +71,12 @@ Name | Type | Description  | Notes
 
 Historical WHOIS records for a domain
 
+Every WHOIS record captured for the domain since 1986, in one response (no pagination). Cost 2 credits.
+
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -83,9 +85,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.WHOISApi();
-let domainName = "domainName_example"; // String | Domain to fetch historical WHOIS records for
+let domainName = "whoisfreaks.com"; // String | Domain to fetch historical WHOIS records for
 let opts = {
-  'page': 56, // Number | Page number
   'format': "format_example" // String | 
 };
 apiInstance.whoisHistory(domainName, opts).then((data) => {
@@ -102,7 +103,6 @@ apiInstance.whoisHistory(domainName, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domainName** | **String**| Domain to fetch historical WHOIS records for | 
- **page** | **Number**| Page number | [optional] 
  **format** | **String**|  | [optional] 
 
 ### Return type
@@ -130,7 +130,7 @@ Real-time WHOIS lookup from authoritative servers. Cost 1 credit.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -182,7 +182,7 @@ Reverse WHOIS lookup by keyword
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -191,9 +191,9 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.WHOISApi();
-let keyword = "keyword_example"; // String | Keyword to search across WHOIS records
+let keyword = "whoisfreaks"; // String | Keyword to search across WHOIS records
 let opts = {
-  'page': 56, // Number | Page number
+  'page': 1, // Number | Page number
   'format': "format_example" // String | 
 };
 apiInstance.whoisReverse(keyword, opts).then((data) => {

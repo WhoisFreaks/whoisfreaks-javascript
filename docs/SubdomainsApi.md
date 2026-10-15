@@ -19,7 +19,7 @@ All subdomains including nested. 2 credits per query.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -28,10 +28,10 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.SubdomainsApi();
-let domain = "domain_example"; // String | 
+let domain = "whoisfreaks.com"; // String | 
 let opts = {
-  'after': new Date("2013-10-20"), // Date | 
-  'before': new Date("2013-10-20"), // Date | 
+  'after': new Date("2026-01-01"), // Date | 
+  'before': new Date("2026-10-01"), // Date | 
   'status': "status_example", // String | 
   'page': 1, // Number | 
   'format': "'json'" // String | 

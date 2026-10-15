@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -20,7 +20,7 @@ import IpReputationResponse from '../model/IpReputationResponse';
 /**
 * IPReputation service.
 * @module api/IPReputationApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class IPReputationApi {
 
@@ -86,7 +86,7 @@ export default class IPReputationApi {
 
     /**
      * IP Reputation Lookup
-     * Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+     * Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
      * @param {String} ip 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/IpReputationResponse} and HTTP response
      */
@@ -120,7 +120,7 @@ export default class IPReputationApi {
 
     /**
      * IP Reputation Lookup
-     * Threat intel for IP — VPN, proxy, Tor, bots. 1 credit.
+     * Threat intel for IP: VPN, proxy, Tor, bots. 1 credit.
      * @param {String} ip 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/IpReputationResponse}
      */

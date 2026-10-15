@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -19,7 +19,7 @@ import SnapshotStatus from '../model/SnapshotStatus';
 /**
 * DatabasesASNWHOIS service.
 * @module api/DatabasesASNWHOISApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class DatabasesASNWHOISApi {
 
@@ -40,7 +40,7 @@ export default class DatabasesASNWHOISApi {
      * ASN WHOIS Snapshot
      * ASN WHOIS Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbAsnWhoisWithHttpInfo(date, opts) {
       opts = opts || {};
@@ -63,7 +63,7 @@ export default class DatabasesASNWHOISApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -84,7 +84,7 @@ export default class DatabasesASNWHOISApi {
      * ASN WHOIS Snapshot
      * ASN WHOIS Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbAsnWhois(date, opts) {
       return this.dbAsnWhoisWithHttpInfo(date, opts)

@@ -1,7 +1,7 @@
 {
   "name": "whoisfreaks-js",
-  "version": "0.21.0",
-  "description": "Complete WhoisFreaks API \u2014 WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com ",
+  "version": "0.23.2",
+  "description": "JavaScript WHOIS API client for Node.js and browsers: live, historical, reverse and bulk WHOIS, DNS lookup, domain availability, typosquatting",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -43,12 +43,28 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "whois",
+    "whois-api",
+    "whois-lookup",
+    "rdap",
+    "dns-lookup",
+    "domain-availability",
+    "typosquatting",
+    "reverse-whois",
+    "whois-history",
+    "nodejs"
+  ],
+  "author": "WhoisFreaks <support@whoisfreaks.com>",
+  "homepage": "https://whoisfreaks.com/products/whois-api",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WhoisFreaks/wf-sdks.git"
+    "url": "git+https://github.com/WhoisFreaks/whoisfreaks-javascript.git"
   },
-  "homepage": "https://github.com/WhoisFreaks/wf-sdks",
   "bugs": {
-    "url": "https://github.com/WhoisFreaks/wf-sdks/issues"
+    "url": "https://github.com/WhoisFreaks/whoisfreaks-javascript/issues"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkDomainAvailabilityRequest model module.
  * @module model/BulkDomainAvailabilityRequest
- * @version 0.21.0
+ * @version 0.23.2
  */
 class BulkDomainAvailabilityRequest {
     /**
@@ -86,13 +86,13 @@ class BulkDomainAvailabilityRequest {
 
 
 /**
- * Mode 1 — list of full domain names. Cannot be used with tld.
+ * Mode 1: list of full domain names. Cannot be used with tld.
  * @member {Array.<String>} domainNames
  */
 BulkDomainAvailabilityRequest.prototype['domainNames'] = undefined;
 
 /**
- * Mode 2 — TLDs to check against the domain query param. Cannot be used with domainNames.
+ * Mode 2: TLDs to check against the domain query param. Cannot be used with domainNames.
  * @member {Array.<String>} tld
  */
 BulkDomainAvailabilityRequest.prototype['tld'] = undefined;

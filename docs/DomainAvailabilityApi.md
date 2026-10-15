@@ -20,7 +20,7 @@ Two bulk modes. Mode 1: POST domainNames array. Mode 2: POST tld array plus doma
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -76,7 +76,7 @@ Check availability of a single domain and optionally get suggestions across mult
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];

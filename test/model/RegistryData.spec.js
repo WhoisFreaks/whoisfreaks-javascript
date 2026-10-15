@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -114,8 +114,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property whoisRawDomain (base name: "whois_raw_domain")', function() {
-      // uncomment below and update the code to test the property whoisRawDomain
+    it('should have the property whoisRawRegistery (base name: "whois_raw_registery")', function() {
+      // uncomment below and update the code to test the property whoisRawRegistery
       //var instance = new WhoisFreaks.RegistryData();
       //expect(instance).to.be();
     });

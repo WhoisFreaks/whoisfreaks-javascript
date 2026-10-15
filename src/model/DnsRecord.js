@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DnsRecord model module.
  * @module model/DnsRecord
- * @version 0.21.0
+ * @version 0.23.2
  */
 class DnsRecord {
     /**
@@ -53,13 +53,25 @@ class DnsRecord {
             
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = ApiClient.convertToType(data['type'], 'Number');
+            }
+            if (data.hasOwnProperty('dnsType')) {
+                obj['dnsType'] = ApiClient.convertToType(data['dnsType'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('ttl')) {
                 obj['ttl'] = ApiClient.convertToType(data['ttl'], 'Number');
+            }
+            if (data.hasOwnProperty('rawText')) {
+                obj['rawText'] = ApiClient.convertToType(data['rawText'], 'String');
+            }
+            if (data.hasOwnProperty('rRsetType')) {
+                obj['rRsetType'] = ApiClient.convertToType(data['rRsetType'], 'Number');
+            }
+            if (data.hasOwnProperty('singleName')) {
+                obj['singleName'] = ApiClient.convertToType(data['singleName'], 'String');
             }
             if (data.hasOwnProperty('address')) {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
@@ -108,12 +120,20 @@ class DnsRecord {
      */
     static validateJSON(data) {
         // ensure the json data is a string
-        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
-            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
+        if (data['dnsType'] && !(typeof data['dnsType'] === 'string' || data['dnsType'] instanceof String)) {
+            throw new Error("Expected the field `dnsType` to be a primitive type in the JSON string but got " + data['dnsType']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['rawText'] && !(typeof data['rawText'] === 'string' || data['rawText'] instanceof String)) {
+            throw new Error("Expected the field `rawText` to be a primitive type in the JSON string but got " + data['rawText']);
+        }
+        // ensure the json data is a string
+        if (data['singleName'] && !(typeof data['singleName'] === 'string' || data['singleName'] instanceof String)) {
+            throw new Error("Expected the field `singleName` to be a primitive type in the JSON string but got " + data['singleName']);
         }
         // ensure the json data is a string
         if (data['address'] && !(typeof data['address'] === 'string' || data['address'] instanceof String)) {
@@ -149,9 +169,16 @@ class DnsRecord {
 
 
 /**
- * @member {String} type
+ * Numeric DNS record type: 1 A, 2 NS, 5 CNAME, 6 SOA, 12 PTR, 15 MX, 16 TXT, 28 AAAA, 99 SPF.
+ * @member {Number} type
  */
 DnsRecord.prototype['type'] = undefined;
+
+/**
+ * Record type name, e.g. A, MX, TXT
+ * @member {String} dnsType
+ */
+DnsRecord.prototype['dnsType'] = undefined;
 
 /**
  * @member {String} name
@@ -162,6 +189,23 @@ DnsRecord.prototype['name'] = undefined;
  * @member {Number} ttl
  */
 DnsRecord.prototype['ttl'] = undefined;
+
+/**
+ * The record in zone-file format
+ * @member {String} rawText
+ */
+DnsRecord.prototype['rawText'] = undefined;
+
+/**
+ * @member {Number} rRsetType
+ */
+DnsRecord.prototype['rRsetType'] = undefined;
+
+/**
+ * Target host for NS, CNAME and PTR records
+ * @member {String} singleName
+ */
+DnsRecord.prototype['singleName'] = undefined;
 
 /**
  * @member {String} address
@@ -199,6 +243,7 @@ DnsRecord.prototype['host'] = undefined;
 DnsRecord.prototype['admin'] = undefined;
 
 /**
+ * SOA serial; values above 2^31 are common, so it is 64-bit
  * @member {Number} serial
  */
 DnsRecord.prototype['serial'] = undefined;

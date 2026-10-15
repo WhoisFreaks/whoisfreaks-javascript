@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -17,12 +17,11 @@ import DnsResponse from './DnsResponse';
 /**
  * The HistoricalDnsResponse model module.
  * @module model/HistoricalDnsResponse
- * @version 0.21.0
+ * @version 0.23.2
  */
 class HistoricalDnsResponse {
     /**
      * Constructs a new <code>HistoricalDnsResponse</code>.
-     * Note: &#39;currenPage&#39; spelling matches the API.
      * @alias module:model/HistoricalDnsResponse
      * @extends Object
      */
@@ -56,14 +55,14 @@ class HistoricalDnsResponse {
             if (data.hasOwnProperty('totalPages')) {
                 obj['totalPages'] = ApiClient.convertToType(data['totalPages'], 'Number');
             }
-            if (data.hasOwnProperty('currenPage')) {
-                obj['currenPage'] = ApiClient.convertToType(data['currenPage'], 'Number');
+            if (data.hasOwnProperty('currentPage')) {
+                obj['currentPage'] = ApiClient.convertToType(data['currentPage'], 'Number');
             }
             if (data.hasOwnProperty('totalRecords')) {
                 obj['totalRecords'] = ApiClient.convertToType(data['totalRecords'], 'Number');
             }
-            if (data.hasOwnProperty('historicalDns')) {
-                obj['historicalDns'] = ApiClient.convertToType(data['historicalDns'], [DnsResponse]);
+            if (data.hasOwnProperty('historicalDnsRecords')) {
+                obj['historicalDnsRecords'] = ApiClient.convertToType(data['historicalDnsRecords'], [DnsResponse]);
             }
         }
         return obj;
@@ -76,8 +75,8 @@ class HistoricalDnsResponse {
      */
     static validateJSON(data) {
         // ensure the json data is an array
-        if (!Array.isArray(data['historicalDns'])) {
-            throw new Error("Expected the field `historicalDns` to be an array in the JSON data but got " + data['historicalDns']);
+        if (!Array.isArray(data['historicalDnsRecords'])) {
+            throw new Error("Expected the field `historicalDnsRecords` to be an array in the JSON data but got " + data['historicalDnsRecords']);
         }
 
         return true;
@@ -94,9 +93,9 @@ class HistoricalDnsResponse {
 HistoricalDnsResponse.prototype['totalPages'] = undefined;
 
 /**
- * @member {Number} currenPage
+ * @member {Number} currentPage
  */
-HistoricalDnsResponse.prototype['currenPage'] = undefined;
+HistoricalDnsResponse.prototype['currentPage'] = undefined;
 
 /**
  * @member {Number} totalRecords
@@ -104,9 +103,9 @@ HistoricalDnsResponse.prototype['currenPage'] = undefined;
 HistoricalDnsResponse.prototype['totalRecords'] = undefined;
 
 /**
- * @member {Array.<module:model/DnsResponse>} historicalDns
+ * @member {Array.<module:model/DnsResponse>} historicalDnsRecords
  */
-HistoricalDnsResponse.prototype['historicalDns'] = undefined;
+HistoricalDnsResponse.prototype['historicalDnsRecords'] = undefined;
 
 
 

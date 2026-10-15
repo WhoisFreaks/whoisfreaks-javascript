@@ -15,14 +15,14 @@ Method | HTTP request | Description
 
 ## downloadThreatFeedMalware
 
-> File downloadThreatFeedMalware(opts)
+> Blob downloadThreatFeedMalware(opts)
 
 Download the daily malware threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -32,7 +32,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesThreatFeedApi();
 let opts = {
-  'date': "date_example" // String | Feed date (yyyy-MM-dd); defaults to latest available
+  'date': "2026-10-01" // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
 };
 apiInstance.downloadThreatFeedMalware(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -47,11 +47,11 @@ apiInstance.downloadThreatFeedMalware(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] 
+ **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] 
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -60,19 +60,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 
 
 ## downloadThreatFeedMalwareSample
 
-> File downloadThreatFeedMalwareSample()
+> Blob downloadThreatFeedMalwareSample()
 
 Download a sample of the malware threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -95,7 +95,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -104,19 +104,19 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 
 
 ## downloadThreatFeedPhishing
 
-> File downloadThreatFeedPhishing(opts)
+> Blob downloadThreatFeedPhishing(opts)
 
 Download the daily phishing threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -126,7 +126,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesThreatFeedApi();
 let opts = {
-  'date': "date_example" // String | Feed date (yyyy-MM-dd); defaults to latest available
+  'date': "2026-10-01" // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
 };
 apiInstance.downloadThreatFeedPhishing(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -141,11 +141,11 @@ apiInstance.downloadThreatFeedPhishing(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] 
+ **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] 
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -154,19 +154,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 
 
 ## downloadThreatFeedPhishingSample
 
-> File downloadThreatFeedPhishingSample()
+> Blob downloadThreatFeedPhishingSample()
 
 Download a sample of the phishing threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -189,7 +189,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -198,19 +198,19 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 
 
 ## downloadThreatFeedSpam
 
-> File downloadThreatFeedSpam(opts)
+> Blob downloadThreatFeedSpam(opts)
 
 Download the daily spam threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -220,7 +220,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesThreatFeedApi();
 let opts = {
-  'date': "date_example" // String | Feed date (yyyy-MM-dd); defaults to latest available
+  'date': "2026-10-01" // String | Feed date (yyyy-MM-dd); omit for the full dump of the feed
 };
 apiInstance.downloadThreatFeedSpam(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -235,11 +235,11 @@ apiInstance.downloadThreatFeedSpam(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date** | **String**| Feed date (yyyy-MM-dd); defaults to latest available | [optional] 
+ **date** | **String**| Feed date (yyyy-MM-dd); omit for the full dump of the feed | [optional] 
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -248,19 +248,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 
 
 ## downloadThreatFeedSpamSample
 
-> File downloadThreatFeedSpamSample()
+> Blob downloadThreatFeedSpamSample()
 
 Download a sample of the spam threat feed (CSV)
 
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -283,7 +283,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -292,5 +292,5 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/octet-stream, application/json
 

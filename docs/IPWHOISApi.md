@@ -19,7 +19,7 @@ WHOIS for an IP address. 1 credit.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -28,7 +28,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.IPWHOISApi();
-let ip = "ip_example"; // String | 
+let ip = "8.8.8.8"; // String | 
 let opts = {
   'format': "'json'" // String | 
 };

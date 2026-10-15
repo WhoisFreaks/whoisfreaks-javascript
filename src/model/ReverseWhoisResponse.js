@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -17,12 +17,12 @@ import WhoisHistoricalItem from './WhoisHistoricalItem';
 /**
  * The ReverseWhoisResponse model module.
  * @module model/ReverseWhoisResponse
- * @version 0.21.0
+ * @version 0.23.2
  */
 class ReverseWhoisResponse {
     /**
      * Constructs a new <code>ReverseWhoisResponse</code>.
-     * Reverse WHOIS response. Pagination keys are capitalized (Total_Result/Total_Pages/Current_Page) as returned by the API.
+     * Reverse WHOIS response. Pagination keys (total_Result, total_Pages, current_Page) are spelled as the API returns them.
      * @alias module:model/ReverseWhoisResponse
      * @extends Object
      */
@@ -53,14 +53,14 @@ class ReverseWhoisResponse {
             ApiClient.constructFromObject(data, obj, 'Object');
             
 
-            if (data.hasOwnProperty('Total_Result')) {
-                obj['Total_Result'] = ApiClient.convertToType(data['Total_Result'], 'Number');
+            if (data.hasOwnProperty('total_Result')) {
+                obj['total_Result'] = ApiClient.convertToType(data['total_Result'], 'Number');
             }
-            if (data.hasOwnProperty('Total_Pages')) {
-                obj['Total_Pages'] = ApiClient.convertToType(data['Total_Pages'], 'Number');
+            if (data.hasOwnProperty('total_Pages')) {
+                obj['total_Pages'] = ApiClient.convertToType(data['total_Pages'], 'Number');
             }
-            if (data.hasOwnProperty('Current_Page')) {
-                obj['Current_Page'] = ApiClient.convertToType(data['Current_Page'], 'Number');
+            if (data.hasOwnProperty('current_Page')) {
+                obj['current_Page'] = ApiClient.convertToType(data['current_Page'], 'Number');
             }
             if (data.hasOwnProperty('whois_domains_historical')) {
                 obj['whois_domains_historical'] = ApiClient.convertToType(data['whois_domains_historical'], [WhoisHistoricalItem]);
@@ -89,19 +89,19 @@ class ReverseWhoisResponse {
 
 
 /**
- * @member {Number} Total_Result
+ * @member {Number} total_Result
  */
-ReverseWhoisResponse.prototype['Total_Result'] = undefined;
+ReverseWhoisResponse.prototype['total_Result'] = undefined;
 
 /**
- * @member {Number} Total_Pages
+ * @member {Number} total_Pages
  */
-ReverseWhoisResponse.prototype['Total_Pages'] = undefined;
+ReverseWhoisResponse.prototype['total_Pages'] = undefined;
 
 /**
- * @member {Number} Current_Page
+ * @member {Number} current_Page
  */
-ReverseWhoisResponse.prototype['Current_Page'] = undefined;
+ReverseWhoisResponse.prototype['current_Page'] = undefined;
 
 /**
  * @member {Array.<module:model/WhoisHistoricalItem>} whois_domains_historical

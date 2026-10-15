@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## dbDropped
 
-> File dbDropped(whois, opts)
+> Blob dbDropped(whois, opts)
 
 Dropped Domains
 
@@ -23,7 +23,7 @@ Dropped Domains. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -34,7 +34,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhoisFreaks.DatabasesExpiringDroppedApi();
 let whois = true; // Boolean | 
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbDropped(whois, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## dbDroppedBacklinks
 
-> File dbDroppedBacklinks(opts)
+> Blob dbDroppedBacklinks(opts)
 
 Dropped With Backlinks
 
@@ -77,7 +77,7 @@ Dropped With Backlinks. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -88,7 +88,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhoisFreaks.DatabasesExpiringDroppedApi();
 let opts = {
   'whois': true, // Boolean | 
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbDroppedBacklinks(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Dropped Domains (JSON). Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -141,8 +141,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesExpiringDroppedApi();
 let opts = {
-  'date': new Date("2013-10-20"), // Date | yyyy-MM-dd; omit for latest
-  'tlds': "tlds_example" // String | 
+  'date': new Date("2026-10-01"), // Date | yyyy-MM-dd; omit for latest
+  'tlds': "com,net" // String | 
 };
 apiInstance.dbDroppedJson(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ## dbExpired
 
-> File dbExpired(whois, opts)
+> Blob dbExpired(whois, opts)
 
 Expiring Domains
 
@@ -185,7 +185,7 @@ Expiring Domains. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -196,7 +196,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new WhoisFreaks.DatabasesExpiringDroppedApi();
 let whois = true; // Boolean | 
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbExpired(whois, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## dbExpiredCleaned
 
-> File dbExpiredCleaned(opts)
+> Blob dbExpiredCleaned(opts)
 
 Expiring Cleaned WHOIS
 
@@ -239,7 +239,7 @@ Expiring Cleaned WHOIS. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -249,7 +249,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesExpiringDroppedApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbExpiredCleaned(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 

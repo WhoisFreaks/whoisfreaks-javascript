@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **domainRegistrar** | [**RegistrarInformation**](RegistrarInformation.md) |  | [optional] 
 **nameServers** | **[String]** |  | [optional] 
 **domainStatus** | **[String]** |  | [optional] 
-**whoisRawDomain** | **String** |  | [optional] 
+**whoisRawRegistery** | **String** | Raw registry WHOIS text (field name spelled as the API returns it) | [optional] 
 
 

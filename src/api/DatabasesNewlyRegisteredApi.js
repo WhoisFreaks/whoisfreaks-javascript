@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesNewlyRegistered service.
 * @module api/DatabasesNewlyRegisteredApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class DatabasesNewlyRegisteredApi {
 
@@ -42,7 +42,7 @@ export default class DatabasesNewlyRegisteredApi {
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
      * @param {String} [tlds] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbNewlyCctldWithHttpInfo(whois, opts) {
       opts = opts || {};
@@ -67,7 +67,7 @@ export default class DatabasesNewlyRegisteredApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -91,7 +91,7 @@ export default class DatabasesNewlyRegisteredApi {
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
      * @param {String} opts.tlds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbNewlyCctld(whois, opts) {
       return this.dbNewlyCctldWithHttpInfo(whois, opts)
@@ -106,7 +106,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered ccTLD Cleaned WHOIS (CSV). Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbNewlyCctldCleanedWithHttpInfo(opts) {
       opts = opts || {};
@@ -125,7 +125,7 @@ export default class DatabasesNewlyRegisteredApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -147,7 +147,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered ccTLD Cleaned WHOIS (CSV). Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbNewlyCctldCleaned(opts) {
       return this.dbNewlyCctldCleanedWithHttpInfo(opts)
@@ -221,7 +221,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered With DNS. Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbNewlyDnsWithHttpInfo(opts) {
       opts = opts || {};
@@ -240,7 +240,7 @@ export default class DatabasesNewlyRegisteredApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -262,7 +262,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered With DNS. Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbNewlyDns(opts) {
       return this.dbNewlyDnsWithHttpInfo(opts)
@@ -279,7 +279,7 @@ export default class DatabasesNewlyRegisteredApi {
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
      * @param {String} [tlds] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbNewlyGtldWithHttpInfo(whois, opts) {
       opts = opts || {};
@@ -304,7 +304,7 @@ export default class DatabasesNewlyRegisteredApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -328,7 +328,7 @@ export default class DatabasesNewlyRegisteredApi {
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
      * @param {String} opts.tlds 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbNewlyGtld(whois, opts) {
       return this.dbNewlyGtldWithHttpInfo(whois, opts)
@@ -343,7 +343,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered gTLD Cleaned WHOIS (CSV). Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbNewlyGtldCleanedWithHttpInfo(opts) {
       opts = opts || {};
@@ -362,7 +362,7 @@ export default class DatabasesNewlyRegisteredApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -384,7 +384,7 @@ export default class DatabasesNewlyRegisteredApi {
      * Newly Registered gTLD Cleaned WHOIS (CSV). Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbNewlyGtldCleaned(opts) {
       return this.dbNewlyGtldCleanedWithHttpInfo(opts)

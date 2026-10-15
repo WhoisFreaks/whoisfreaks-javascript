@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -19,7 +19,7 @@ import SnapshotStatus from '../model/SnapshotStatus';
 /**
 * DatabasesIPGeolocation service.
 * @module api/DatabasesIPGeolocationApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class DatabasesIPGeolocationApi {
 
@@ -40,7 +40,7 @@ export default class DatabasesIPGeolocationApi {
      * IP to City Snapshot
      * IP to City Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbIpCityWithHttpInfo(date, opts) {
       opts = opts || {};
@@ -63,7 +63,7 @@ export default class DatabasesIPGeolocationApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -84,7 +84,7 @@ export default class DatabasesIPGeolocationApi {
      * IP to City Snapshot
      * IP to City Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbIpCity(date, opts) {
       return this.dbIpCityWithHttpInfo(date, opts)
@@ -149,7 +149,7 @@ export default class DatabasesIPGeolocationApi {
      * IP to Country Snapshot
      * IP to Country Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbIpCountryWithHttpInfo(date, opts) {
       opts = opts || {};
@@ -172,7 +172,7 @@ export default class DatabasesIPGeolocationApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -193,7 +193,7 @@ export default class DatabasesIPGeolocationApi {
      * IP to Country Snapshot
      * IP to Country Snapshot. Returns the file/snapshot described by this operation.
      * @param {Date} date 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbIpCountry(date, opts) {
       return this.dbIpCountryWithHttpInfo(date, opts)

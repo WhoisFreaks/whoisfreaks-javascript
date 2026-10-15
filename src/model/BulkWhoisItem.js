@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -12,16 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import EligibilityInfo from './EligibilityInfo';
+import PersonalInformation from './PersonalInformation';
+import RegistrarInformation from './RegistrarInformation';
+import RegistryData from './RegistryData';
+import ResellerContact from './ResellerContact';
 
 /**
  * The BulkWhoisItem model module.
  * @module model/BulkWhoisItem
- * @version 0.21.0
+ * @version 0.23.2
  */
 class BulkWhoisItem {
     /**
      * Constructs a new <code>BulkWhoisItem</code>.
-     * One bulk WHOIS result; success items also carry all WhoisResponse fields.
+     * One bulk WHOIS result. Successful items carry the same fields as a live WHOIS lookup.
      * @alias module:model/BulkWhoisItem
      * @extends Object
      */
@@ -61,6 +66,66 @@ class BulkWhoisItem {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = ApiClient.convertToType(data['error'], 'String');
             }
+            if (data.hasOwnProperty('query_time')) {
+                obj['query_time'] = ApiClient.convertToType(data['query_time'], 'String');
+            }
+            if (data.hasOwnProperty('whois_server')) {
+                obj['whois_server'] = ApiClient.convertToType(data['whois_server'], 'String');
+            }
+            if (data.hasOwnProperty('domain_registered')) {
+                obj['domain_registered'] = ApiClient.convertToType(data['domain_registered'], 'String');
+            }
+            if (data.hasOwnProperty('secure_dns')) {
+                obj['secure_dns'] = ApiClient.convertToType(data['secure_dns'], 'Boolean');
+            }
+            if (data.hasOwnProperty('domain_handle')) {
+                obj['domain_handle'] = ApiClient.convertToType(data['domain_handle'], 'String');
+            }
+            if (data.hasOwnProperty('create_date')) {
+                obj['create_date'] = ApiClient.convertToType(data['create_date'], 'String');
+            }
+            if (data.hasOwnProperty('update_date')) {
+                obj['update_date'] = ApiClient.convertToType(data['update_date'], 'String');
+            }
+            if (data.hasOwnProperty('expiry_date')) {
+                obj['expiry_date'] = ApiClient.convertToType(data['expiry_date'], 'String');
+            }
+            if (data.hasOwnProperty('domain_registrar')) {
+                obj['domain_registrar'] = RegistrarInformation.constructFromObject(data['domain_registrar']);
+            }
+            if (data.hasOwnProperty('reseller_contact')) {
+                obj['reseller_contact'] = ResellerContact.constructFromObject(data['reseller_contact']);
+            }
+            if (data.hasOwnProperty('registrant_contact')) {
+                obj['registrant_contact'] = PersonalInformation.constructFromObject(data['registrant_contact']);
+            }
+            if (data.hasOwnProperty('administrative_contact')) {
+                obj['administrative_contact'] = PersonalInformation.constructFromObject(data['administrative_contact']);
+            }
+            if (data.hasOwnProperty('technical_contact')) {
+                obj['technical_contact'] = PersonalInformation.constructFromObject(data['technical_contact']);
+            }
+            if (data.hasOwnProperty('billing_contact')) {
+                obj['billing_contact'] = PersonalInformation.constructFromObject(data['billing_contact']);
+            }
+            if (data.hasOwnProperty('eligibility_info')) {
+                obj['eligibility_info'] = EligibilityInfo.constructFromObject(data['eligibility_info']);
+            }
+            if (data.hasOwnProperty('abuse_contact')) {
+                obj['abuse_contact'] = RegistrarInformation.constructFromObject(data['abuse_contact']);
+            }
+            if (data.hasOwnProperty('name_servers')) {
+                obj['name_servers'] = ApiClient.convertToType(data['name_servers'], ['String']);
+            }
+            if (data.hasOwnProperty('domain_status')) {
+                obj['domain_status'] = ApiClient.convertToType(data['domain_status'], ['String']);
+            }
+            if (data.hasOwnProperty('whois_raw_domain')) {
+                obj['whois_raw_domain'] = ApiClient.convertToType(data['whois_raw_domain'], 'String');
+            }
+            if (data.hasOwnProperty('registry_data')) {
+                obj['registry_data'] = RegistryData.constructFromObject(data['registry_data']);
+            }
         }
         return obj;
     }
@@ -78,6 +143,46 @@ class BulkWhoisItem {
         // ensure the json data is a string
         if (data['error'] && !(typeof data['error'] === 'string' || data['error'] instanceof String)) {
             throw new Error("Expected the field `error` to be a primitive type in the JSON string but got " + data['error']);
+        }
+        // ensure the json data is a string
+        if (data['query_time'] && !(typeof data['query_time'] === 'string' || data['query_time'] instanceof String)) {
+            throw new Error("Expected the field `query_time` to be a primitive type in the JSON string but got " + data['query_time']);
+        }
+        // ensure the json data is a string
+        if (data['whois_server'] && !(typeof data['whois_server'] === 'string' || data['whois_server'] instanceof String)) {
+            throw new Error("Expected the field `whois_server` to be a primitive type in the JSON string but got " + data['whois_server']);
+        }
+        // ensure the json data is a string
+        if (data['domain_registered'] && !(typeof data['domain_registered'] === 'string' || data['domain_registered'] instanceof String)) {
+            throw new Error("Expected the field `domain_registered` to be a primitive type in the JSON string but got " + data['domain_registered']);
+        }
+        // ensure the json data is a string
+        if (data['domain_handle'] && !(typeof data['domain_handle'] === 'string' || data['domain_handle'] instanceof String)) {
+            throw new Error("Expected the field `domain_handle` to be a primitive type in the JSON string but got " + data['domain_handle']);
+        }
+        // ensure the json data is a string
+        if (data['create_date'] && !(typeof data['create_date'] === 'string' || data['create_date'] instanceof String)) {
+            throw new Error("Expected the field `create_date` to be a primitive type in the JSON string but got " + data['create_date']);
+        }
+        // ensure the json data is a string
+        if (data['update_date'] && !(typeof data['update_date'] === 'string' || data['update_date'] instanceof String)) {
+            throw new Error("Expected the field `update_date` to be a primitive type in the JSON string but got " + data['update_date']);
+        }
+        // ensure the json data is a string
+        if (data['expiry_date'] && !(typeof data['expiry_date'] === 'string' || data['expiry_date'] instanceof String)) {
+            throw new Error("Expected the field `expiry_date` to be a primitive type in the JSON string but got " + data['expiry_date']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['name_servers'])) {
+            throw new Error("Expected the field `name_servers` to be an array in the JSON data but got " + data['name_servers']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['domain_status'])) {
+            throw new Error("Expected the field `domain_status` to be an array in the JSON data but got " + data['domain_status']);
+        }
+        // ensure the json data is a string
+        if (data['whois_raw_domain'] && !(typeof data['whois_raw_domain'] === 'string' || data['whois_raw_domain'] instanceof String)) {
+            throw new Error("Expected the field `whois_raw_domain` to be a primitive type in the JSON string but got " + data['whois_raw_domain']);
         }
 
         return true;
@@ -102,6 +207,106 @@ BulkWhoisItem.prototype['domain_name'] = undefined;
  * @member {String} error
  */
 BulkWhoisItem.prototype['error'] = undefined;
+
+/**
+ * @member {String} query_time
+ */
+BulkWhoisItem.prototype['query_time'] = undefined;
+
+/**
+ * @member {String} whois_server
+ */
+BulkWhoisItem.prototype['whois_server'] = undefined;
+
+/**
+ * @member {String} domain_registered
+ */
+BulkWhoisItem.prototype['domain_registered'] = undefined;
+
+/**
+ * @member {Boolean} secure_dns
+ */
+BulkWhoisItem.prototype['secure_dns'] = undefined;
+
+/**
+ * @member {String} domain_handle
+ */
+BulkWhoisItem.prototype['domain_handle'] = undefined;
+
+/**
+ * @member {String} create_date
+ */
+BulkWhoisItem.prototype['create_date'] = undefined;
+
+/**
+ * @member {String} update_date
+ */
+BulkWhoisItem.prototype['update_date'] = undefined;
+
+/**
+ * @member {String} expiry_date
+ */
+BulkWhoisItem.prototype['expiry_date'] = undefined;
+
+/**
+ * @member {module:model/RegistrarInformation} domain_registrar
+ */
+BulkWhoisItem.prototype['domain_registrar'] = undefined;
+
+/**
+ * @member {module:model/ResellerContact} reseller_contact
+ */
+BulkWhoisItem.prototype['reseller_contact'] = undefined;
+
+/**
+ * @member {module:model/PersonalInformation} registrant_contact
+ */
+BulkWhoisItem.prototype['registrant_contact'] = undefined;
+
+/**
+ * @member {module:model/PersonalInformation} administrative_contact
+ */
+BulkWhoisItem.prototype['administrative_contact'] = undefined;
+
+/**
+ * @member {module:model/PersonalInformation} technical_contact
+ */
+BulkWhoisItem.prototype['technical_contact'] = undefined;
+
+/**
+ * @member {module:model/PersonalInformation} billing_contact
+ */
+BulkWhoisItem.prototype['billing_contact'] = undefined;
+
+/**
+ * @member {module:model/EligibilityInfo} eligibility_info
+ */
+BulkWhoisItem.prototype['eligibility_info'] = undefined;
+
+/**
+ * @member {module:model/RegistrarInformation} abuse_contact
+ */
+BulkWhoisItem.prototype['abuse_contact'] = undefined;
+
+/**
+ * @member {Array.<String>} name_servers
+ */
+BulkWhoisItem.prototype['name_servers'] = undefined;
+
+/**
+ * @member {Array.<String>} domain_status
+ */
+BulkWhoisItem.prototype['domain_status'] = undefined;
+
+/**
+ * @member {String} whois_raw_domain
+ */
+BulkWhoisItem.prototype['whois_raw_domain'] = undefined;
+
+/**
+ * @member {module:model/RegistryData} registry_data
+ */
+BulkWhoisItem.prototype['registry_data'] = undefined;
 
 
 

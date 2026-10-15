@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## dbSubdomainsDaily
 
-> File dbSubdomainsDaily(opts)
+> Blob dbSubdomainsDaily(opts)
 
 Subdomains Daily
 
@@ -21,7 +21,7 @@ Subdomains Daily. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -31,7 +31,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesSubdomainsApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbSubdomainsDaily(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## dbSubdomainsMonthly
 
-> File dbSubdomainsMonthly(opts)
+> Blob dbSubdomainsMonthly(opts)
 
 Subdomains Monthly
 
@@ -73,7 +73,7 @@ Subdomains Monthly. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -83,7 +83,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesSubdomainsApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbSubdomainsMonthly(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ## dbSubdomainsWeekly
 
-> File dbSubdomainsWeekly(opts)
+> Blob dbSubdomainsWeekly(opts)
 
 Subdomains Weekly
 
@@ -125,7 +125,7 @@ Subdomains Weekly. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -135,7 +135,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesSubdomainsApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbSubdomainsWeekly(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 

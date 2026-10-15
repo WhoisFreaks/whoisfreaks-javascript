@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## dbIpCity
 
-> File dbIpCity(date)
+> Blob dbIpCity(date)
 
 IP to City Snapshot
 
@@ -22,7 +22,7 @@ IP to City Snapshot. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -31,7 +31,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DatabasesIPGeolocationApi();
-let date = new Date("2013-10-20"); // Date | 
+let date = new Date("2026-10-01"); // Date | 
 apiInstance.dbIpCity(date).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -72,7 +72,7 @@ IP to City Snapshot Status. Returns the file/snapshot described by this operatio
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -109,7 +109,7 @@ This endpoint does not need any parameter.
 
 ## dbIpCountry
 
-> File dbIpCountry(date)
+> Blob dbIpCountry(date)
 
 IP to Country Snapshot
 
@@ -118,7 +118,7 @@ IP to Country Snapshot. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -127,7 +127,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DatabasesIPGeolocationApi();
-let date = new Date("2013-10-20"); // Date | 
+let date = new Date("2026-10-01"); // Date | 
 apiInstance.dbIpCountry(date).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -168,7 +168,7 @@ IP to Country Snapshot Status. Returns the file/snapshot described by this opera
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];

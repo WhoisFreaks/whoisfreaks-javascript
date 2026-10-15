@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -60,8 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property currenPage (base name: "currenPage")', function() {
-      // uncomment below and update the code to test the property currenPage
+    it('should have the property currentPage (base name: "currentPage")', function() {
+      // uncomment below and update the code to test the property currentPage
       //var instance = new WhoisFreaks.HistoricalDnsResponse();
       //expect(instance).to.be();
     });
@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property historicalDns (base name: "historicalDns")', function() {
-      // uncomment below and update the code to test the property historicalDns
+    it('should have the property historicalDnsRecords (base name: "historicalDnsRecords")', function() {
+      // uncomment below and update the code to test the property historicalDnsRecords
       //var instance = new WhoisFreaks.HistoricalDnsResponse();
       //expect(instance).to.be();
     });

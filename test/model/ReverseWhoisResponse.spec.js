@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -54,19 +54,19 @@
       //expect(instance).to.be.a(WhoisFreaks.ReverseWhoisResponse);
     });
 
-    it('should have the property totalResult (base name: "Total_Result")', function() {
+    it('should have the property totalResult (base name: "total_Result")', function() {
       // uncomment below and update the code to test the property totalResult
       //var instance = new WhoisFreaks.ReverseWhoisResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property totalPages (base name: "Total_Pages")', function() {
+    it('should have the property totalPages (base name: "total_Pages")', function() {
       // uncomment below and update the code to test the property totalPages
       //var instance = new WhoisFreaks.ReverseWhoisResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property currentPage (base name: "Current_Page")', function() {
+    it('should have the property currentPage (base name: "current_Page")', function() {
       // uncomment below and update the code to test the property currentPage
       //var instance = new WhoisFreaks.ReverseWhoisResponse();
       //expect(instance).to.be();

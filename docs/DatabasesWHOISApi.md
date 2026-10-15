@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## dbWhoisDaily
 
-> File dbWhoisDaily(opts)
+> Blob dbWhoisDaily(opts)
 
 WHOIS Database Daily
 
@@ -21,7 +21,7 @@ WHOIS Database Daily. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -31,7 +31,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesWHOISApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbWhoisDaily(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## dbWhoisMonthly
 
-> File dbWhoisMonthly(opts)
+> Blob dbWhoisMonthly(opts)
 
 WHOIS Database Monthly
 
@@ -73,7 +73,7 @@ WHOIS Database Monthly. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -83,7 +83,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesWHOISApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbWhoisMonthly(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ## dbWhoisWeekly
 
-> File dbWhoisWeekly(opts)
+> Blob dbWhoisWeekly(opts)
 
 WHOIS Database Weekly
 
@@ -125,7 +125,7 @@ WHOIS Database Weekly. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -135,7 +135,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.DatabasesWHOISApi();
 let opts = {
-  'date': new Date("2013-10-20") // Date | yyyy-MM-dd; omit for latest
+  'date': new Date("2026-10-01") // Date | yyyy-MM-dd; omit for latest
 };
 apiInstance.dbWhoisWeekly(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 

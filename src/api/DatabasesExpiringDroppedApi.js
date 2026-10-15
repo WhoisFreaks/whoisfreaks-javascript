@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesExpiringDropped service.
 * @module api/DatabasesExpiringDroppedApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class DatabasesExpiringDroppedApi {
 
@@ -41,7 +41,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Boolean} whois 
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbDroppedWithHttpInfo(whois, opts) {
       opts = opts || {};
@@ -65,7 +65,7 @@ export default class DatabasesExpiringDroppedApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -88,7 +88,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Boolean} whois 
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbDropped(whois, opts) {
       return this.dbDroppedWithHttpInfo(whois, opts)
@@ -104,7 +104,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [whois] 
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbDroppedBacklinksWithHttpInfo(opts) {
       opts = opts || {};
@@ -124,7 +124,7 @@ export default class DatabasesExpiringDroppedApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -147,7 +147,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.whois 
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbDroppedBacklinks(opts) {
       return this.dbDroppedBacklinksWithHttpInfo(opts)
@@ -222,7 +222,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Boolean} whois 
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbExpiredWithHttpInfo(whois, opts) {
       opts = opts || {};
@@ -246,7 +246,7 @@ export default class DatabasesExpiringDroppedApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -269,7 +269,7 @@ export default class DatabasesExpiringDroppedApi {
      * @param {Boolean} whois 
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbExpired(whois, opts) {
       return this.dbExpiredWithHttpInfo(whois, opts)
@@ -284,7 +284,7 @@ export default class DatabasesExpiringDroppedApi {
      * Expiring Cleaned WHOIS. Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} [date] yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     dbExpiredCleanedWithHttpInfo(opts) {
       opts = opts || {};
@@ -303,7 +303,7 @@ export default class DatabasesExpiringDroppedApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/octet-stream', 'application/json'];
-      let returnType = File;
+      let returnType = 'Blob';
       let basePaths = ['https://files.whoisfreaks.com'];
       let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
       if (typeof opts['_base_path_index'] !== 'undefined') {
@@ -325,7 +325,7 @@ export default class DatabasesExpiringDroppedApi {
      * Expiring Cleaned WHOIS. Returns the file/snapshot described by this operation.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.date yyyy-MM-dd; omit for latest
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     dbExpiredCleaned(opts) {
       return this.dbExpiredCleanedWithHttpInfo(opts)

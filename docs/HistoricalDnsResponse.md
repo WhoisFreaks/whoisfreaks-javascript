@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **totalPages** | **Number** |  | [optional] 
-**currenPage** | **Number** |  | [optional] 
+**currentPage** | **Number** |  | [optional] 
 **totalRecords** | **Number** |  | [optional] 
-**historicalDns** | [**[DnsResponse]**](DnsResponse.md) |  | [optional] 
+**historicalDnsRecords** | [**[DnsResponse]**](DnsResponse.md) |  | [optional] 
 
 

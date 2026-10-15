@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -13,11 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import ErrorResponse from '../model/ErrorResponse';
 
 /**
 * DatabasesThreatFeed service.
 * @module api/DatabasesThreatFeedApi
-* @version 0.21.0
+* @version 0.23.2
 */
 export default class DatabasesThreatFeedApi {
 
@@ -37,8 +38,8 @@ export default class DatabasesThreatFeedApi {
     /**
      * Download the daily malware threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} [date] Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @param {String} [date] Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     downloadThreatFeedMalwareWithHttpInfo(opts) {
       opts = opts || {};
@@ -56,20 +57,29 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/malware', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download the daily malware threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @param {String} opts.date Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     downloadThreatFeedMalware(opts) {
       return this.downloadThreatFeedMalwareWithHttpInfo(opts)
@@ -81,9 +91,10 @@ export default class DatabasesThreatFeedApi {
 
     /**
      * Download a sample of the malware threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
-    downloadThreatFeedMalwareSampleWithHttpInfo() {
+    downloadThreatFeedMalwareSampleWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -97,21 +108,30 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/malware/sample', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download a sample of the malware threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
-    downloadThreatFeedMalwareSample() {
-      return this.downloadThreatFeedMalwareSampleWithHttpInfo()
+    downloadThreatFeedMalwareSample(opts) {
+      return this.downloadThreatFeedMalwareSampleWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -121,8 +141,8 @@ export default class DatabasesThreatFeedApi {
     /**
      * Download the daily phishing threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} [date] Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @param {String} [date] Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     downloadThreatFeedPhishingWithHttpInfo(opts) {
       opts = opts || {};
@@ -140,20 +160,29 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/phishing', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download the daily phishing threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @param {String} opts.date Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     downloadThreatFeedPhishing(opts) {
       return this.downloadThreatFeedPhishingWithHttpInfo(opts)
@@ -165,9 +194,10 @@ export default class DatabasesThreatFeedApi {
 
     /**
      * Download a sample of the phishing threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
-    downloadThreatFeedPhishingSampleWithHttpInfo() {
+    downloadThreatFeedPhishingSampleWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -181,21 +211,30 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/phishing/sample', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download a sample of the phishing threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
-    downloadThreatFeedPhishingSample() {
-      return this.downloadThreatFeedPhishingSampleWithHttpInfo()
+    downloadThreatFeedPhishingSample(opts) {
+      return this.downloadThreatFeedPhishingSampleWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -205,8 +244,8 @@ export default class DatabasesThreatFeedApi {
     /**
      * Download the daily spam threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} [date] Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @param {String} [date] Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
     downloadThreatFeedSpamWithHttpInfo(opts) {
       opts = opts || {};
@@ -224,20 +263,29 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/spam', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download the daily spam threat feed (CSV)
      * @param {Object} opts Optional parameters
-     * @param {String} opts.date Feed date (yyyy-MM-dd); defaults to latest available
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @param {String} opts.date Feed date (yyyy-MM-dd); omit for the full dump of the feed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
     downloadThreatFeedSpam(opts) {
       return this.downloadThreatFeedSpamWithHttpInfo(opts)
@@ -249,9 +297,10 @@ export default class DatabasesThreatFeedApi {
 
     /**
      * Download a sample of the spam threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link File} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Blob} and HTTP response
      */
-    downloadThreatFeedSpamSampleWithHttpInfo() {
+    downloadThreatFeedSpamSampleWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -265,21 +314,30 @@ export default class DatabasesThreatFeedApi {
 
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
-      let accepts = ['application/octet-stream'];
-      let returnType = File;
+      let accepts = ['application/octet-stream', 'application/json'];
+      let returnType = 'Blob';
+      let basePaths = ['https://files.whoisfreaks.com'];
+      let basePath = basePaths[0]; // by default use the first one in "servers" defined in OpenAPI
+      if (typeof opts['_base_path_index'] !== 'undefined') {
+        if (opts['_base_path_index']  >= basePaths.length || opts['_base_path_index'] <  0) {
+          throw new Error("Invalid index " + opts['_base_path_index'] + " when selecting the host settings. Must be less than " + basePaths.length);
+        }
+        basePath = basePaths[opts['_base_path_index']];
+      }
+
       return this.apiClient.callApi(
         '/v3.4/download/threat-feed/spam/sample', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
+        authNames, contentTypes, accepts, returnType, basePath
       );
     }
 
     /**
      * Download a sample of the spam threat feed (CSV)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link File}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Blob}
      */
-    downloadThreatFeedSpamSample() {
-      return this.downloadThreatFeedSpamSampleWithHttpInfo()
+    downloadThreatFeedSpamSample(opts) {
+      return this.downloadThreatFeedSpamSampleWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

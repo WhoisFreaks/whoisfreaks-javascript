@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## dbAsnWhois
 
-> File dbAsnWhois(date)
+> Blob dbAsnWhois(date)
 
 ASN WHOIS Snapshot
 
@@ -20,7 +20,7 @@ ASN WHOIS Snapshot. Returns the file/snapshot described by this operation.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -29,7 +29,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DatabasesASNWHOISApi();
-let date = new Date("2013-10-20"); // Date | 
+let date = new Date("2026-10-01"); // Date | 
 apiInstance.dbAsnWhois(date).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Blob**
 
 ### Authorization
 
@@ -70,7 +70,7 @@ ASN WHOIS Snapshot Status. Returns the file/snapshot described by this operation
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];

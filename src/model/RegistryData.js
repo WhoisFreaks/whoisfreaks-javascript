@@ -1,6 +1,6 @@
 /**
  * WhoisFreaks API
- * Complete WhoisFreaks API — WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
+ * Complete WhoisFreaks API: WHOIS, DNS, SSL, Geolocation, Typosquatting, IP Intelligence, Domain Reputation, and bulk database downloads.  ## Authentication All requests require an `apiKey` query parameter.  ## Resources - Docs: https://whoisfreaks.com/documentation - Billing: https://billing.whoisfreaks.com - Support: support@whoisfreaks.com 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support@whoisfreaks.com
@@ -17,7 +17,7 @@ import RegistrarInformation from './RegistrarInformation';
 /**
  * The RegistryData model module.
  * @module model/RegistryData
- * @version 0.21.0
+ * @version 0.23.2
  */
 class RegistryData {
     /**
@@ -82,8 +82,8 @@ class RegistryData {
             if (data.hasOwnProperty('domain_status')) {
                 obj['domain_status'] = ApiClient.convertToType(data['domain_status'], ['String']);
             }
-            if (data.hasOwnProperty('whois_raw_domain')) {
-                obj['whois_raw_domain'] = ApiClient.convertToType(data['whois_raw_domain'], 'String');
+            if (data.hasOwnProperty('whois_raw_registery')) {
+                obj['whois_raw_registery'] = ApiClient.convertToType(data['whois_raw_registery'], 'String');
             }
         }
         return obj;
@@ -132,8 +132,8 @@ class RegistryData {
             throw new Error("Expected the field `domain_status` to be an array in the JSON data but got " + data['domain_status']);
         }
         // ensure the json data is a string
-        if (data['whois_raw_domain'] && !(typeof data['whois_raw_domain'] === 'string' || data['whois_raw_domain'] instanceof String)) {
-            throw new Error("Expected the field `whois_raw_domain` to be a primitive type in the JSON string but got " + data['whois_raw_domain']);
+        if (data['whois_raw_registery'] && !(typeof data['whois_raw_registery'] === 'string' || data['whois_raw_registery'] instanceof String)) {
+            throw new Error("Expected the field `whois_raw_registery` to be a primitive type in the JSON string but got " + data['whois_raw_registery']);
         }
 
         return true;
@@ -195,9 +195,10 @@ RegistryData.prototype['name_servers'] = undefined;
 RegistryData.prototype['domain_status'] = undefined;
 
 /**
- * @member {String} whois_raw_domain
+ * Raw registry WHOIS text (field name spelled as the API returns it)
+ * @member {String} whois_raw_registery
  */
-RegistryData.prototype['whois_raw_domain'] = undefined;
+RegistryData.prototype['whois_raw_registery'] = undefined;
 
 
 

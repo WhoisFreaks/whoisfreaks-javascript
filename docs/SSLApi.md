@@ -19,7 +19,7 @@ Real-time SSL cert with optional chain.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -28,7 +28,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.SSLApi();
-let domainName = "domainName_example"; // String | 
+let domainName = "whoisfreaks.com"; // String | 
 let opts = {
   'chain': false, // Boolean | 
   'sslRaw': false, // Boolean | 

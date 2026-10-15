@@ -19,7 +19,7 @@ Find typo variants of a brand. 5 credits per page.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -29,8 +29,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new WhoisFreaks.TyposquattingApi();
 let opts = {
-  'keyword': "keyword_example", // String | 
-  'pattern': "pattern_example", // String | 
+  'keyword': "whoisfreaks", // String | 
+  'pattern': "whois*", // String | 
   'pageToken': "pageToken_example" // String | 
 };
 apiInstance.typosquatting(opts).then((data) => {

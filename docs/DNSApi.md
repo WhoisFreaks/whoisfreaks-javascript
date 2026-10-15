@@ -22,7 +22,7 @@ Up to 100 domains + 100 IPs in one request.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -31,7 +31,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DNSApi();
-let type = "'all'"; // String | 
+let type = "A,MX,TXT"; // String | 
 let dnsBulkRequest = new WhoisFreaks.DnsBulkRequest(); // DnsBulkRequest | 
 let opts = {
   'format': "'json'" // String | 
@@ -78,7 +78,7 @@ All historical DNS records. 2 credits per page (100 records/page).
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -87,8 +87,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DNSApi();
-let domainName = "domainName_example"; // String | 
-let type = "'all'"; // String | 
+let domainName = "whoisfreaks.com"; // String | 
+let type = "A,MX,TXT"; // String | 
 let opts = {
   'page': 1, // Number | 
   'format': "'json'" // String | 
@@ -136,7 +136,7 @@ Real-time DNS record lookup. 1 credit per query.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -145,10 +145,10 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DNSApi();
-let type = "'all'"; // String | all or comma-separated: A,MX,NS,TXT,SOA,SPF,AAAA,CNAME
+let type = "A,MX,TXT"; // String | all or comma-separated: A,MX,NS,TXT,SOA,SPF,AAAA,CNAME
 let opts = {
-  'domainName': "domainName_example", // String | 
-  'ipAddress': "ipAddress_example", // String | Use for PTR lookups
+  'domainName': "whoisfreaks.com", // String | 
+  'ipAddress': "8.8.8.8", // String | Use for PTR lookups
   'format': "'json'" // String | 
 };
 apiInstance.dnsLive(type, opts).then((data) => {
@@ -194,7 +194,7 @@ Search domains by IP or DNS value. 5 credits per page.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -203,7 +203,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.DNSApi();
-let value = "value_example"; // String | IP, CIDR, or record value
+let value = "8.8.8.8"; // String | IP, CIDR, or record value
 let type = "type_example"; // String | 
 let opts = {
   'exact': true, // Boolean | 

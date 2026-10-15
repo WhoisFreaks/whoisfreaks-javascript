@@ -20,7 +20,7 @@ Up to 100 IPs.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -70,7 +70,7 @@ Get location, ASN, currency for an IP. 1 credit.
 ### Example
 
 ```javascript
-import WhoisFreaks from 'whoisfreaks';
+import WhoisFreaks from 'whoisfreaks-js';
 let defaultClient = WhoisFreaks.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
@@ -79,7 +79,7 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new WhoisFreaks.GeolocationApi();
-let ip = "ip_example"; // String | 
+let ip = "8.8.8.8"; // String | 
 apiInstance.geolocation(ip).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
