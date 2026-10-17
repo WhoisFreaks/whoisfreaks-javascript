@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SslPublicKeyInfo model module.
  * @module model/SslPublicKeyInfo
- * @version 0.23.2
+ * @version 0.24.0
  */
 class SslPublicKeyInfo {
     /**

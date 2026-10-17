@@ -17,7 +17,7 @@ import DnsResponse from './DnsResponse';
 /**
  * The Subdomain model module.
  * @module model/Subdomain
- * @version 0.23.2
+ * @version 0.24.0
  */
 class Subdomain {
     /**

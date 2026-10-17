@@ -21,7 +21,7 @@ import ResellerContact from './ResellerContact';
 /**
  * The WhoisHistoricalItem model module.
  * @module model/WhoisHistoricalItem
- * @version 0.23.2
+ * @version 0.24.0
  */
 class WhoisHistoricalItem {
     /**

@@ -17,7 +17,7 @@ import AsnPeer from './AsnPeer';
 /**
  * The AsnInfo model module.
  * @module model/AsnInfo
- * @version 0.23.2
+ * @version 0.24.0
  */
 class AsnInfo {
     /**

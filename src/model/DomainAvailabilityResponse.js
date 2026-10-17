@@ -17,7 +17,7 @@ import DomainAvailabilityItem from './DomainAvailabilityItem';
 /**
  * The DomainAvailabilityResponse model module.
  * @module model/DomainAvailabilityResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DomainAvailabilityResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DnsBulkRequest model module.
  * @module model/DnsBulkRequest
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DnsBulkRequest {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GeoAsn model module.
  * @module model/GeoAsn
- * @version 0.23.2
+ * @version 0.24.0
  */
 class GeoAsn {
     /**

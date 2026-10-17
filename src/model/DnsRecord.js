@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DnsRecord model module.
  * @module model/DnsRecord
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DnsRecord {
     /**

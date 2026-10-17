@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PivotMatch model module.
  * @module model/PivotMatch
- * @version 0.23.2
+ * @version 0.24.0
  */
 class PivotMatch {
     /**

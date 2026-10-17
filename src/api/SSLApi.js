@@ -19,7 +19,7 @@ import SslResponse from '../model/SslResponse';
 /**
 * SSL service.
 * @module api/SSLApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class SSLApi {
 

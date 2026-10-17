@@ -19,7 +19,7 @@ import SnapshotStatus from '../model/SnapshotStatus';
 /**
 * DatabasesIPWHOIS service.
 * @module api/DatabasesIPWHOISApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DatabasesIPWHOISApi {
 

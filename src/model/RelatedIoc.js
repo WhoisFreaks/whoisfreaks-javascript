@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RelatedIoc model module.
  * @module model/RelatedIoc
- * @version 0.23.2
+ * @version 0.24.0
  */
 class RelatedIoc {
     /**

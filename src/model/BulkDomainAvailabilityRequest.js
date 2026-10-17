@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkDomainAvailabilityRequest model module.
  * @module model/BulkDomainAvailabilityRequest
- * @version 0.23.2
+ * @version 0.24.0
  */
 class BulkDomainAvailabilityRequest {
     /**

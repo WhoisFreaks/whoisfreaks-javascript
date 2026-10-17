@@ -1,6 +1,6 @@
 {
   "name": "whoisfreaks-js",
-  "version": "0.23.2",
+  "version": "0.24.0",
   "description": "JavaScript WHOIS API client for Node.js and browsers: live, historical, reverse and bulk WHOIS, DNS lookup, domain availability, typosquatting",
   "license": "MIT",
   "main": "dist/index.js",

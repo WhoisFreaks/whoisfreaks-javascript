@@ -21,7 +21,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DomainAvailability service.
 * @module api/DomainAvailabilityApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DomainAvailabilityApi {
 

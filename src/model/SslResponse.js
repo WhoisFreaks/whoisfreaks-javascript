@@ -17,7 +17,7 @@ import SslCertificate from './SslCertificate';
 /**
  * The SslResponse model module.
  * @module model/SslResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class SslResponse {
     /**

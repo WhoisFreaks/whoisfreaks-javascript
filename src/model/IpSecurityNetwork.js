@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The IpSecurityNetwork model module.
  * @module model/IpSecurityNetwork
- * @version 0.23.2
+ * @version 0.24.0
  */
 class IpSecurityNetwork {
     /**

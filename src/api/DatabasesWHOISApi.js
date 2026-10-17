@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesWHOIS service.
 * @module api/DatabasesWHOISApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DatabasesWHOISApi {
 

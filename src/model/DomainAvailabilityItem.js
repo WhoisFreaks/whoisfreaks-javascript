@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DomainAvailabilityItem model module.
  * @module model/DomainAvailabilityItem
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DomainAvailabilityItem {
     /**

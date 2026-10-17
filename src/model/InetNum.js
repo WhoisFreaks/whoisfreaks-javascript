@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InetNum model module.
  * @module model/InetNum
- * @version 0.23.2
+ * @version 0.24.0
  */
 class InetNum {
     /**

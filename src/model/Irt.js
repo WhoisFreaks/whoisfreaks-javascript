@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Irt model module.
  * @module model/Irt
- * @version 0.23.2
+ * @version 0.24.0
  */
 class Irt {
     /**

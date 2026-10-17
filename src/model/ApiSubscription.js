@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApiSubscription model module.
  * @module model/ApiSubscription
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ApiSubscription {
     /**

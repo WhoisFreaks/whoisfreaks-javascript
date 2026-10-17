@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GeoCompany model module.
  * @module model/GeoCompany
- * @version 0.23.2
+ * @version 0.24.0
  */
 class GeoCompany {
     /**

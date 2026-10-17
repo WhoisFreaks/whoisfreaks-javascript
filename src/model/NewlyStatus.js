@@ -17,7 +17,7 @@ import DateRangeStatus from './DateRangeStatus';
 /**
  * The NewlyStatus model module.
  * @module model/NewlyStatus
- * @version 0.23.2
+ * @version 0.24.0
  */
 class NewlyStatus {
     /**

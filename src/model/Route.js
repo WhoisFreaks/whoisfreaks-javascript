@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Route model module.
  * @module model/Route
- * @version 0.23.2
+ * @version 0.24.0
  */
 class Route {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SslAuthorityInfo model module.
  * @module model/SslAuthorityInfo
- * @version 0.23.2
+ * @version 0.24.0
  */
 class SslAuthorityInfo {
     /**

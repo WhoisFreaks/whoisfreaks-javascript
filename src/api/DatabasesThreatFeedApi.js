@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesThreatFeed service.
 * @module api/DatabasesThreatFeedApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DatabasesThreatFeedApi {
 

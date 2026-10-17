@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SslCertificatePolicy model module.
  * @module model/SslCertificatePolicy
- * @version 0.23.2
+ * @version 0.24.0
  */
 class SslCertificatePolicy {
     /**

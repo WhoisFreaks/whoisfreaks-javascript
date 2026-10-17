@@ -17,7 +17,7 @@ import UpdateFrequencies from './UpdateFrequencies';
 /**
  * The DatabaseUpdates model module.
  * @module model/DatabaseUpdates
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DatabaseUpdates {
     /**

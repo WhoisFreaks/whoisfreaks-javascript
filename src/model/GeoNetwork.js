@@ -18,7 +18,7 @@ import GeoCompany from './GeoCompany';
 /**
  * The GeoNetwork model module.
  * @module model/GeoNetwork
- * @version 0.23.2
+ * @version 0.24.0
  */
 class GeoNetwork {
     /**

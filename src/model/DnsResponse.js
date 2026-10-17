@@ -17,7 +17,7 @@ import DnsRecord from './DnsRecord';
 /**
  * The DnsResponse model module.
  * @module model/DnsResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DnsResponse {
     /**

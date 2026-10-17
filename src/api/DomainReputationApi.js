@@ -19,7 +19,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DomainReputation service.
 * @module api/DomainReputationApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DomainReputationApi {
 

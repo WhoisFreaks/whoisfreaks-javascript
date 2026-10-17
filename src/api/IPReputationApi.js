@@ -20,7 +20,7 @@ import IpReputationResponse from '../model/IpReputationResponse';
 /**
 * IPReputation service.
 * @module api/IPReputationApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class IPReputationApi {
 

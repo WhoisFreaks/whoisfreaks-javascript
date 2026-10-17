@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RegistrarInformation model module.
  * @module model/RegistrarInformation
- * @version 0.23.2
+ * @version 0.24.0
  */
 class RegistrarInformation {
     /**

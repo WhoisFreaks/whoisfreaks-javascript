@@ -17,7 +17,7 @@ import DnsResponse from './DnsResponse';
 /**
  * The ReverseDnsResponse model module.
  * @module model/ReverseDnsResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ReverseDnsResponse {
     /**

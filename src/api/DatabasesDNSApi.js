@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesDNS service.
 * @module api/DatabasesDNSApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DatabasesDNSApi {
 

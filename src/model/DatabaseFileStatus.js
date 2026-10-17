@@ -20,7 +20,7 @@ import ThreatFeedStatus from './ThreatFeedStatus';
 /**
  * The DatabaseFileStatus model module.
  * @module model/DatabaseFileStatus
- * @version 0.23.2
+ * @version 0.24.0
  */
 class DatabaseFileStatus {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkGeolocationRequest model module.
  * @module model/BulkGeolocationRequest
- * @version 0.23.2
+ * @version 0.24.0
  */
 class BulkGeolocationRequest {
     /**

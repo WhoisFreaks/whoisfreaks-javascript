@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResellerContact model module.
  * @module model/ResellerContact
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ResellerContact {
     /**

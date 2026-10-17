@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WhoisOrganization model module.
  * @module model/WhoisOrganization
- * @version 0.23.2
+ * @version 0.24.0
  */
 class WhoisOrganization {
     /**

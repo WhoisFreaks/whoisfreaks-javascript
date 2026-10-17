@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ThreatSource model module.
  * @module model/ThreatSource
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ThreatSource {
     /**

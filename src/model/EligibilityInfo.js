@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EligibilityInfo model module.
  * @module model/EligibilityInfo
- * @version 0.23.2
+ * @version 0.24.0
  */
 class EligibilityInfo {
     /**

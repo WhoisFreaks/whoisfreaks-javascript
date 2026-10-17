@@ -20,7 +20,7 @@ import IpSecurityNetwork from './IpSecurityNetwork';
 /**
  * The IpReputationResponse model module.
  * @module model/IpReputationResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class IpReputationResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SnapshotStatus model module.
  * @module model/SnapshotStatus
- * @version 0.23.2
+ * @version 0.24.0
  */
 class SnapshotStatus {
     /**

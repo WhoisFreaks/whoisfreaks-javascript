@@ -18,7 +18,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * DatabasesSubdomains service.
 * @module api/DatabasesSubdomainsApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class DatabasesSubdomainsApi {
 

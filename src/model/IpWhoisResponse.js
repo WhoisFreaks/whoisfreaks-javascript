@@ -21,7 +21,7 @@ import WhoisPerson from './WhoisPerson';
 /**
  * The IpWhoisResponse model module.
  * @module model/IpWhoisResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class IpWhoisResponse {
     /**

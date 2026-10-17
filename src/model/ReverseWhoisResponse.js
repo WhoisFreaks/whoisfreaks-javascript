@@ -17,7 +17,7 @@ import WhoisHistoricalItem from './WhoisHistoricalItem';
 /**
  * The ReverseWhoisResponse model module.
  * @module model/ReverseWhoisResponse
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ReverseWhoisResponse {
     /**

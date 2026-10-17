@@ -19,7 +19,7 @@ import ErrorResponse from '../model/ErrorResponse';
 /**
 * ASNWHOIS service.
 * @module api/ASNWHOISApi
-* @version 0.23.2
+* @version 0.24.0
 */
 export default class ASNWHOISApi {
 

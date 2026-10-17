@@ -17,7 +17,7 @@ import DateRangeStatus from './DateRangeStatus';
 /**
  * The ThreatFeedStatus model module.
  * @module model/ThreatFeedStatus
- * @version 0.23.2
+ * @version 0.24.0
  */
 class ThreatFeedStatus {
     /**
